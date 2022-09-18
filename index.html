@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM PENDAFTARAN</title>
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 1;
+    padding: 1;
+}
+
+body {
+    font-family: comic sans MS;
+}
+
+img {
+    align-items: center;
+    width: 100%;
+}
+
+.artikel{
+    padding: 10px 15px;
+    border-radius: 7px;
+}
+
+legend {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.grup input[name="no.pendaftaran"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 400px;
+}
+
+.grup input[name="nama"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 480px;
+}
+
+.grup input[name="TTL.1"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 470px;
+}
+
+.grup input[name="TTL2"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 415px;
+}
+
+.grup textarea[name="alamat"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 360px;
+}
+
+.grup input[name="rt/rw"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 454px;
+}
+
+.grup input[name="kota"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 485px;
+}
+
+.grup input[name="pos"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 455px;
+}
+
+.grup input[name="nama.ortu"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 400px;
+}
+
+.grup input[name="asal.sekolah"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 430px;
+}
+
+.grup input[name="jurusan.sekolah"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 405px;
+}
+
+.grup input[name="nomor.ijazah"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 230px;
+}
+
+.grup input[name="tanggal.lulus"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 425px;
+}
+
+.grup input[name="nilai.nem"] {
+    display: flex inline-flex;
+    float: none;
+    margin-left: 165px;
+}
+
+
+input[type="radio"] {
+    flex-direction: row;
+    padding: 1px;
+    float: none;
+}
+
+.a-jk {
+    margin-left: 415px;
+    margin-right: 15px;
+}
+
+.a-wk {
+    margin-left: 415px;
+    margin-right: 15px;
+}
+
+.a-uj {
+    margin-left: 413px;
+    margin-right: 15px;
+}
+
+.a-sp {
+    margin-left: 370px;
+    margin-right: 15px;
+}
+
+.a-agama {
+    margin-left: 467px;
+    margin-right: 15px;
+}
+
+.a-st {
+    margin-left: 470px;
+    margin-right: 15px;
+}
+
+.a-kw {
+    margin-left: 393px;
+    margin-right: 15px;
+}
+
+.a-pek {
+    margin-left: 443px;
+    margin-right: 15px;
+}
+
+.a-sspt {
+    margin-left: 280px;
+    margin-right: 15px;
+}
+
+.table {
+    position: relative;
+    margin-left: 350px;
+    margin-right: 40px;
+    width: 70%;
+    padding: 100px;
+}
+
+.td-input {
+    margin-top: 0;
+    display: flex inline-flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.table input[type="radio"] {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2px;
+}
+
+.table label {
+    word-spacing: 2px;
+    list-style-type: none;
+    font-size: 12px;
+    float: right;
+    margin-right: 2px;
+}
+
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    background-color: white;
+    color: black;
+}
+
+input, textarea { 
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+}
+
+.button {
+    width: 100px;
+    margin: 10px auto;
+    size: 45px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.footer {
+    border: 1px;
+    position: relative;
+    float: right;
+    margin-right: 15px;
+}
+
+.li-footer {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+    </style>
+</head>
+<body>
+    <img src="https://gusnantodev.github.io/p03form-lv1/img/cop-surat.png"/>
+    <nav>
+        <h1 align="center">FORMULIR PENDAFTARAN MAHASISWA BARU</h1>
+
+        <ul>Petunjuk Pengisian</ul>
+        <ul>1.Isilah data isian dengan cermat, teliti dan benar</ul>
+        <ul>2.Isilah dengan huruf balok</ul>
+        <ul>3.Salah penulisan pada formulir ini akan berakibat kesalahan pada penulisan data 'Saudara pada ijazah</ul>
+    </nav>
+
+    <div class="artikel">
+
+    <form class="horizontal">
+        <!--FORM 1-->
+        <fieldset>
+            <div class="grup">
+                <ul>
+                    <p>No. Pendaftaran :
+                        <a class="a.text">
+                            <input type="text" name="no.pendaftaran" size="40" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>     
+
+            <div class="grup">
+                <ul>
+                    <p>Nama :
+                        <a class="a.text">
+                            <input type="text" name="nama" size="40" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+
+            <div class="grup">
+                <ul>
+                    <p>Jenis Kelamin*)
+                        <a class="a-jk">
+                            <input type="radio" name="jenis_kelamin" value="pria"/>
+                            <label for="jenis_kelamin">Pria</label>
+                            <input type="radio" name="jenis_kelamin" value="wanita"/>
+                            <label for="jenis_kelamin">Wanita</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+        
+
+            <div>
+                <ul>
+                    <p>Jenjang/Jurusan yang dipilih*)
+                    <table class="table">
+                        <tr>
+                            <th rowspan="2">Jenjang</th>
+                            <th colspan="3">Program Study</th>
+                        </tr>
+                        <tr>
+                            <th>Reguler</th>
+                            <th>Karyawan</th>
+                        </tr>
+                        <tr>
+                            <td>D 3 (Diploma Tiga)</td>
+                            <td class="td-input">
+                                <input type="radio" name="3" value="TI"/>
+                                <label for="3">Teknik Informatika</label>
+                                <input type="radio" name="3" value="RPL"/>
+                                <label for="3">Rekayasa Perangkat Lunak</label>
+                                <input type="radio" name="3" value="MI"/>
+                                <label for="3">Manajemen Informasi</label>
+                            </td>
+                            <td class="td-input">
+                                <input type="radio" name="3" value="TI"/>
+                                <label for="3">Teknik Informatika</label>
+                                <input type="radio" name="3" value="RPL"/>
+                                <label for="3">Rekayasa Perangkat Lunak</label>
+                                <input type="radio" name="3" value="MI"/>
+                                <label for="3">Manajemen Informasi</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>S1 (Strata Satu)</td>
+                            <td class="td-input">
+                                <input type="radio" name="S1" value="TI"/>
+                                <label for="S1">Teknik Informatika</label>
+                                <input type="radio" name="S1" value="RPL"/>
+                                <label for="S1">Rekayasa Perangkat Lunak</label>
+                                <input type="radio" name="S1" value="MI"/>
+                                <label for="S1">Manajemen Informasi</label>
+                            <td class="td-input">
+                                <input type="radio" name="S1" value="TI"/>
+                                <label for="S1">Teknik Informatika</label>
+                                <input type="radio" name="S1" value="RPL"/>
+                                <label for="S1">Rekayasa Perangkat Lunak</label>
+                                <input type="radio" name="S1" value="MI"/>
+                                <label for="S1">Manajemen Informasi</label></td>
+                            </td>
+                        </tr>
+                    </table>
+                    </p>
+                </ul>
+            </div>
+            
+            
+        
+            <div class="grup">
+                <ul>
+                    <p>Waktu Kuliah*)
+                        <a class="a-wk">
+                            <input type="radio" name="Waktu_kuliah" value="Pagi"/>
+                            <label for="Waktu_kuliah">Pagi</label>
+                            <input type="radio" name="Waktu_kuliah" value="Siang"/>
+                            <label for="Waktu_kuliah">Siang</label>
+                            <input type="radio" name="Waktu_kuliah" value="Malam"/>
+                            <label for="Waktu_kuliah">Malam</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+     
+
+            <div class="grup">
+                <ul>
+                    <p>Ukuran Jaket*)
+                        <a class="a-uj">
+                            <input type="radio" name="ukuran_jaket" value="Small"/>
+                            <label for="ukuran_jaket">Small</label>
+                            <input type="radio" name="ukuran_jaket" value="Medium"/>
+                            <label for="ukuran_jaket">Medium</label>
+                            <input type="radio" name="ukuran_jaket" value="Large"/>
+                            <label for="ukuran_jaket">Large</label>
+                            <input type="radio" name="ukuran_jaket" value="Extra"/>
+                            <label for="ukuran_jaket">Extra Large</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+
+
+            <div class="grup">
+                <ul>
+                    <p>Sistem Pembayaran*)
+                        <a class="a-sp">
+                            <input type="radio" name="Sistem_Pembayaran" value="Angsuran"/>
+                            <label for="Sistem_Pembayaran">Angsuran</label>
+                            <input type="radio" name="Sistem_Pembayaran" value="Tunai"/>
+                            <label for="Sistem_Pembayaran">Tunai</label>
+                            <input type="radio" name="Sistem_Pembayaran" value="dll"/>
+                            <label for="Sistem_Pembayaran">Dll</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+        </fieldset>
+
+
+        <!--FORM 2-->
+        <fieldset>
+            <legend bgcolor=Gainsboro>
+                <li>
+                    <p>DATA PRIBADI</p>
+                </li>
+            </legend>
+
+            <div class="grup">
+                <ul>
+                    <p>Agama*)
+                        <a class="a-agama">
+                            <input type="radio" name="Agama" value="Islam"/>
+                            <label for="Agama">Islam</label>
+                            <input type="radio" name="Agama" value="Hindu"/>
+                            <label for="Agama">Hindu</label>
+                            <input type="radio" name="Agama" value="Kristen"/>
+                            <label for="Agama">Kristen</label>
+                            <input type="radio" name="Agama" value="Katholik"/>
+                            <label for="Agama">Katholik</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+
+            <div class="grup">
+                <ul>
+                    <p>Tempat
+                        <a class="a.text">
+                            <input type="text" name="TTL.1" size="30" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+ 
+        
+            <div class="grup">
+                <ul>
+                    <p>Tanggal Lahir
+                        <a class="a.text">:
+                            <input type="text" name="TTL2" size="30" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+       
+            <div class="grup">
+                <ul>
+                    <p>Alamat dan No.rumah
+                        <a class="a.text">:
+                            <textarea name="alamat" cols="50" rows="5"></textarea>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+
+            <div class="grup">
+                <ul>
+                    <p>RT / RW
+                        <a class="a.text">:
+                            <input type="text" name="rt/rw" size="10" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+       
+            <div class="grup">
+                <ul>
+                    <p>Kota
+                        <a class="a.text">:
+                            <input type="text" name="kota" size="30" maxlength="50"/>
+                        </a>
+                    </p>
+                    <p>Kode Pos
+                        <a class="a.text">:
+                            <input type="text" name="pos" size="10" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+        
+            <div class="grup">
+                <ul>
+                    <p>Status*)
+                        <a class="a-st">
+                            <input type="radio" name="Status" value="Menikah"/>
+                            <label for="Status">Menikah</label>
+                            <input type="radio" name="Status" value="Belum_Menikah"/>
+                            <label for="Status">Belum Menikah</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+
+            <div class="grup">
+                <ul>
+                    <p>Kewarganegaraan*)
+                        <a class="a-kw">
+                            <input type="radio" name="Kewarganegaraan" value="WNI"/>
+                            <label for="Kewarganegaraan">WNI</label>
+                            <input type="radio" name="Kewarganegaraan" value="WNA"/>
+                            <label for="Kewarganegaraan">WNA</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+     
+            <div class="grup">
+                <ul>
+                    <p>Nama Ayah/Ibu
+                        <a class="a.text">:
+                            <input type="text" name="nama.ortu" size="40" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+        
+            <div class="grup">
+                <ul>
+                    <p>Pekerjaan *)
+                        <a class="a-pek">
+                            <input type="radio" name="pekerjaan" value="PNS"/>
+                            <label for="pekerjaan">PNS</label>
+                            <input type="radio" name="pekerjaan" value="Swasta"/>
+                            <label for="pekerjaan">swasta</label>
+                            <input type="radio" name="pekerjaan" value="Wiraswasta"/>
+                            <label for="pekerjaan">Wiraswasta</label>
+                            <input type="radio" name="pekerjaan" value="dll"/>
+                            <label for="pekerjaan">dll</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+        </fieldset>    
+    
+
+        <!--FORM 3-->
+        <fieldset>
+            <legend>
+                <li>
+                    <p>PENDIDIKAN TERAKHIR</p>
+                </li>
+            </legend>
+        
+            <div class="grup">
+                <ul>
+                    <p>Asal Sekolah
+                        <a class="a.text">:
+                            <input type="text" name="asal.sekolah" size="40" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+        
+            <div class="grup">
+                <ul>
+                    <p>Status Sekolah/Perguruan tinggi*)
+                        <a class="a-sspt">
+                            <input type="radio" name="Status_sekolah" value="pria"/>
+                            <label for="Status_sekolah">Negeri</label>
+                            <input type="radio" name="Status_sekolah" value="Swasta"/>
+                            <label for="Status_sekolah">Swasta</label>
+                            <input type="radio" name="Status_sekolah" value="Swasta"/>
+                            <label for="Status_sekolah">Luar Negeri</label>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+       
+            <div class="grup">
+                <ul>
+                    <p>Jurusan Sekolah
+                        <a class="a.text">:
+                            <input type="text" name="jurusan.sekolah" size="40" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+      
+            <div class="grup">
+                <ul>
+                    <p>Nomor Ijazah SMA/SMK/Diploma 3/S1
+                        <a class="a.text">:
+                            <input type="text" name="nomor.ijazah" size="50" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+        
+            <div class="grup">
+                <ul>
+                    <p>Tanggal Lulus
+                        <a class="a.text">:
+                            <input type="text" name="tanggal.lulus" size="50" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+       
+            <div class="grup">
+                <ul>
+                    <p>Nilai NEM STTB/Index Prestasi Komulatif (IPK)
+                        <a class="a.text">:
+                            <input type="text" name="nilai.nem" size="20" maxlength="50"/>
+                        </a>
+                    </p>
+                </ul>
+            </div>
+        </fieldset>
+
+
+        <button class="button">Simpan</button>
+        
+    </form>
+    </div>
+
+    <footer class="footer">
+        <ul>
+            <li class="li-footer">
+                <a>Cirebon</a>
+                <a>|</a>
+                <input type="date" />
+            </li>
+                
+            <li class="li-footer">
+
+            </li>
+            <li class="li-footer">
+                <input class="foot-input" type="text" name="namalengkap" size="20" maxlength="50"/>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
